@@ -1,7 +1,7 @@
 package model;
 
 import java.util.ArrayList;
-//Prueba 2.
+//Prueba 
 public class ManageUsers {
 	private ArrayList<User> listUsers;
 
