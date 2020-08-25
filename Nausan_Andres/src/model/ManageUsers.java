@@ -8,7 +8,10 @@ public class ManageUsers {
 	public ManageUsers() {
 		this.listUsers = new ArrayList<>();
 	}
-	
+	/**
+	 * añade un nuevo usuario
+	 * @param user
+	 */
 	public void addUser(User user) {
 		listUsers.add(user);
 	}
