@@ -32,7 +32,10 @@ public class ManageUsers {
 		};
 		return vector;
 	}
-	
+	/**
+	 * 
+	 * @return list
+	 */
 	public ArrayList<Object[]> toListObject(){
 		ArrayList<Object[]> list = new ArrayList<>();
 		for (int i = 0; i < listUsers.size(); i++) {
