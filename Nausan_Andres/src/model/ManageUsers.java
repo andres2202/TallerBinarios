@@ -13,7 +13,7 @@ public class ManageUsers {
 		listUsers.add(user);
 	}
 	
-	//Hola Crack
+	//Hola Crack scs
 	public Object[] toObjectVector(int index) {
 		User user = listUsers.get(index);
 		Object[] vector= {
