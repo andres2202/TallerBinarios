@@ -1,12 +1,14 @@
 package model;
 
 import java.util.ArrayList;
+
 public class ManageUsers {
 	private ArrayList<User> listUsers;
 
 	public ManageUsers() {
 		this.listUsers = new ArrayList<>();
 	}
+	
 	/**
 	 * añade un nuevo usuario
 	 * @param user
@@ -14,7 +16,7 @@ public class ManageUsers {
 	public void addUser(User user) {
 		listUsers.add(user);
 	}
-	
+
 	public Object[] toObjectVector(int index) {
 		User user = listUsers.get(index);
 		Object[] vector= {
