@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-//Prueba 
 public class ManageUsers {
 	private ArrayList<User> listUsers;
 
@@ -16,7 +15,6 @@ public class ManageUsers {
 		listUsers.add(user);
 	}
 	
-	//Hola Crack scs ff
 	public Object[] toObjectVector(int index) {
 		User user = listUsers.get(index);
 		Object[] vector= {

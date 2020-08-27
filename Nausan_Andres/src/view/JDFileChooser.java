@@ -9,6 +9,8 @@ import java.io.IOException;
 
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class JDFileChooser extends JDialog{
@@ -28,6 +30,12 @@ public class JDFileChooser extends JDialog{
 	}
 	
 	private void initComponents(ActionListener actionListener) {
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+				| UnsupportedLookAndFeelException e) {
+			e.printStackTrace();
+		}
 		this.jFileChooser = new JFileChooser(new File("resources"));
 		jFileChooser.addActionListener(actionListener);
 		FileNameExtensionFilter filterFile = new FileNameExtensionFilter("comsuption","comsuption");

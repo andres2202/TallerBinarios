@@ -10,6 +10,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 import Utilities.Utilities;
+import view.ConstantView;
 
 
 public class JTableModel extends JTable{
@@ -19,10 +20,10 @@ public class JTableModel extends JTable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	public JTableModel(String[] nameColumns, DefaultTableModel model,Color background,Color tableHeader,Font fontHeader,Color foregorund,Font fontTable) {
+	public JTableModel(String[] nameColumns, DefaultTableModel model,Color background,Font fontHeader,Color foregorund,Font fontTable) {
 		this.setModel(model);
 		model.setColumnIdentifiers(nameColumns);
-		this.getTableHeader().setBackground(tableHeader);
+		this.getTableHeader().setBackground(ConstantView.COLOR_OF_HEADER_TABLE);
 		this.getTableHeader().setFont(fontHeader);
 		this.getTableHeader().setForeground(foregorund);
 		this.setBackground(background);

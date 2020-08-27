@@ -33,7 +33,7 @@ public class JPBody extends JPanel{
 		this.setLayout(new BorderLayout());
 		this.setPreferredSize(new Dimension(0,(int)(JPMainPanel.SCREEN_SIZE.getHeight()*ConstantView.NINETY_PERCENTAGE)));
 		String[] headers = ConstantView.HEADERS;
-		this.jTable = new JTableModel(headers, model, Color.WHITE, Color.red, ConstantView.FONT_FRAME,
+		this.jTable = new JTableModel(headers, model, Color.WHITE, ConstantView.FONT_FRAME,
 				Color.WHITE, ConstantView.FONT_FRAME);
 		JScrollPane jSTable = new JScrollPane(jTable);
 		jTable.setRowHeight( 35 );
