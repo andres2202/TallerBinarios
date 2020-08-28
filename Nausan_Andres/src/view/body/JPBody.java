@@ -42,11 +42,11 @@ public class JPBody extends JPanel{
 	}
 	
 	public void addElementToTable(Object[] vector) {
+		vector[7] = Utilities.toFormatPrice((double) vector[7]);
 		vector[8] = Utilities.toFormatPrice((double) vector[8]);
 		vector[9] = Utilities.toFormatPrice((double) vector[9]);
 		vector[10] = Utilities.toFormatPrice((double) vector[10]);
 		vector[11] = Utilities.toFormatPrice((double) vector[11]);
-		vector[12] = Utilities.toFormatPrice((double) vector[12]);
 		jTable.addElementToTable(vector, model);
 	}
 }

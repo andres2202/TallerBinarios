@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import model.ManageUsers;
+import model.TypeOfUse;
 import model.User;
 import persistence.FileManager;
 import view.ConstantView;
@@ -38,11 +39,11 @@ public class Presenter implements ActionListener{
 	}
 	
 	private void showBarAverage() {
-		
+		jFMainWindow.showBarPercentage(manageUsers.listPercentageAverage(),ConstantView.TYPE_STRATUM,"Promedio de Estratos.");
 	}
 
 	private void showBarPercentage() {
-		jFMainWindow.showBarPercentage(new Object[] {70.6,30.6},ConstantView.USER_ENERGY,"Porcentaje por el punto de energia.");
+		jFMainWindow.showBarPercentage(manageUsers.listPercentageTypeUse(),ConstantView.USER_ENERGY,"Porcentaje por el punto de energia.");
 	}
 
 	private void readFile() {

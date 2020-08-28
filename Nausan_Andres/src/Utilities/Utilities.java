@@ -13,7 +13,6 @@ import model.User;
 public class Utilities {
 
 	public static User createUser( DataInputStream dataIn) throws IOException {
-		String name = "NN";
 		User user = null;
 		
 		int id = dataIn.readInt();
@@ -23,14 +22,13 @@ public class Utilities {
 		int previousReading = dataIn.readInt();
 		int currentReading = dataIn.readInt();
 		Tenement tenement = new Tenement(stratum, numberOfInhabitants, typeOfUse, previousReading, currentReading);
-		user = new User(name, id, tenement);
+		user = new User( id, tenement);
 		return user;
 	}
 	
 	public static void writeFile(ArrayList<User> list, DataOutputStream dataOut) {
 		for (User user : list) {
 			try {
-				dataOut.writeUTF(user.getName());
 				dataOut.writeInt(user.getId());
 				dataOut.writeByte(user.getTenement().getStratum());
 				dataOut.writeByte(user.getTenement().getNumberOfInhabitants());

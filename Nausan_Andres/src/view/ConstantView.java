@@ -35,7 +35,6 @@ public class ConstantView {
 	public static final float NINETY_PERCENTAGE = 0.9f;
 	
 	//headers table
-	public static final String H_NAME = "Nombre";
 	public static final String H_ID = "ID";
 	public static final String H_STRATUM = "Estrato";
 	public static final String H_N_INHABITANTS = "Nº Habs";
@@ -48,11 +47,12 @@ public class ConstantView {
 	public static final String H_TAX = "Impuesto";
 	public static final String H_SURCHARGE = "Recargo";
 	public static final String H_NET_TURNOVER = "Vr. neto";
-	public static final String[] HEADERS = {H_NAME,H_ID,H_STRATUM,H_N_INHABITANTS,H_TYPE_USE,
+	public static final String[] HEADERS = {H_ID,H_STRATUM,H_N_INHABITANTS,H_TYPE_USE,
 											H_PREVIOUS_READING,H_CURRENT_READING,H_CONSUMPTION,
 											H_GROSS_TURNOVER,H_SUBSIDY,H_TAX,H_SURCHARGE,H_NET_TURNOVER};
 	
 	public static final String[] USER_ENERGY = {"Uso domestico","Uso Comercial"};
+	public static final String[] TYPE_STRATUM = {"Estrato 1","Estrato 2","Estrato 3","Estrato 4","Estrato 5"};
 	
 	//colores
 	public static final Color YELLOW_LIGHT = Color.decode("#FAF438");

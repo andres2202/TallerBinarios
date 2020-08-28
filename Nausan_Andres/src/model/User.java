@@ -1,18 +1,12 @@
 package model;
 
 public class User {
-	private String name;
 	private int id;
 	private Tenement tenement;
 
-	public User(String name, int id,Tenement tenement) {
-		this.name = name;
+	public User(int id,Tenement tenement) {
 		this.id = id;
 		this.tenement = tenement;
-	}
-
-	public String getName() {
-		return name;
 	}
 
 	public int getId() {

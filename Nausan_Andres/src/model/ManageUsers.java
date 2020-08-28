@@ -20,7 +20,6 @@ public class ManageUsers {
 	public Object[] toObjectVector(int index) {
 		User user = listUsers.get(index);
 		Object[] vector= {
-				user.getName(),
 				user.getId(),user.getTenement().getStratum(),
 				user.getTenement().getNumberOfInhabitants(),
 				user.getTenement().getTypeOfUse().getTraduction(),
@@ -47,21 +46,46 @@ public class ManageUsers {
 		}
 		return list;
 	}
+	/**
+	 * 
+	 * @param typeOfUse
+	 * @return
+	 */
+	public double getAverageTypeUse(TypeOfUse typeOfUse) {
+		int count = 0;
+		for (User user : listUsers) {
+			if (user.getTenement().getTypeOfUse().equals(typeOfUse)) {
+				count++;
+			}
+		}
+		return ((double)count*100/listUsers.size());
+	}
 	
 	
+	public Object[] listPercentageTypeUse() {
+        return new Object[] {
+                getAverageTypeUse(TypeOfUse.DOMESTIC),
+                getAverageTypeUse(TypeOfUse.COMMERCIAL)
+        };
+    }
 	
-	
+	private double getGenerealAv() {
+		double value = 0;
+		for (User user : listUsers) {
+			value += user.calculateTotal();
+		}
+		return value;
+	}
 	public double getAverageTotal(int stratum) {
 		double count = 0;
-		int countUsers = 0;
+		double value = getGenerealAv();
 		int sizeList = listUsers.size();
 		for (int i = 0; i < sizeList; i++) {
 			if(listUsers.get(i).getTenement().getStratum()==stratum){
 					count += listUsers.get(i).calculateTotal();
-					countUsers++;
 			}
 		}
-		return (count/countUsers);
+		return (count/value)*100;
 	}
 	
 	public Object[] listPercentageAverage() {
