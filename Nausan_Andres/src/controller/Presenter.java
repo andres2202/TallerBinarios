@@ -39,7 +39,7 @@ public class Presenter implements ActionListener{
 	}
 	
 	private void showBarAverage() {
-		jFMainWindow.showBarAverage(new Object[] {150.7,199.9,30.5,70.7,89.5},ConstantView.TYPE_STRATUM,"Promedio de Estratos.");
+		jFMainWindow.showBarPercentage(new Object[] {150.7,199.9,30.5,70.7,89.5},ConstantView.TYPE_STRATUM,"Promedio de Estratos.");
 	}
 
 	private void showBarPercentage() {

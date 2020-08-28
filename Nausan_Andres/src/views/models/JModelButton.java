@@ -69,12 +69,15 @@ public class JModelButton extends JButton{
 		this.setForeground(colors[1]);
 	}
 	
-	public JModelButton(String imagePath,int width,int height) {
+	public JModelButton(String text,String imagePath,int width,int height) {
 		ImageIcon imagen = new ImageIcon(getClass().getResource(imagePath));
 		Icon icon = new ImageIcon(imagen.getImage().getScaledInstance(width, height, Image.SCALE_SMOOTH));
 		this.setIcon(icon);
+		this.setText(text);
 		this.setBorderPainted( false );
 		this.setFocusable( false );
+		this.setHorizontalTextPosition( SwingConstants.CENTER );
+		this.setVerticalTextPosition( SwingConstants.BOTTOM );
 		this.setOpaque(false);
 		this.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 	}

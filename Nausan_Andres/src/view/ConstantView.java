@@ -54,7 +54,7 @@ public class ConstantView {
 	
 	public static final String[] USER_ENERGY = {"Uso domestico","Uso Comercial"};
 	public static final String[] TYPE_STRATUM = {"Estrato 1","Estrato 2","Estrato 3","Estrato 4","Estrato 5"};
-	
+	public static final Color COLOR_LIGHT_GREEN= Color.decode("#F2F7D8");
 	//colores
 	public static final Color YELLOW_LIGHT = Color.decode("#FAF438");
 	public static final Color COLOR_DARK_BLUE = Color.decode("#304A4B");

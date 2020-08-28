@@ -17,6 +17,10 @@ public class JModelLabel extends JLabel{
 		this.setIcon( new ImageIcon(getClass().getResource( imagePath )));
 	}
 	
+	public JModelLabel(String imagePath,boolean f) {
+		this.setText(imagePath);
+	}
+	
 	public JModelLabel(String text,Color fg,Font font) {
 		super(text);
 		this.setOpaque(false);

@@ -37,20 +37,6 @@ public class JShowPercentageBar extends JDialog{
 		BoxLayout box = new BoxLayout(jPanel, BoxLayout.Y_AXIS);
 		jPanel.setLayout(box);
 		jPanel.setBackground(ConstantView.WHITE);
-		
-	}
-	
-	public void resetAverage(Object[] objects, String[] headers,String title) {
-		this.setTitle(title);
-		int max =200, min = 20;
-		for (int i = 0; i < objects.length; i++) {
-			double doubleAux = (double) objects[i];
-			label = new JModelLabel(headers[i],ConstantView.BLACK,ConstantView.FONT_ARIAL_ROUNDER_15);
-			JModelProgressBar jBar = new JModelProgressBar((int)doubleAux, 300, 60,ConstantView.COLOR_DARK_BLUE,min,max);
-			jPanel.add(label);
-			jPanel.add(jBar);
-		}
-		this.add(jPanel);
 	}
 	
 	public void resetDatas(Object[] objects, String[] headers,String title) {

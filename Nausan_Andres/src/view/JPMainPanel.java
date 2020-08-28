@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 
 import view.body.JPBody;
+import view.body.JPEast;
 import view.header.JPHeader;
 
 public class JPMainPanel extends JPanel{
@@ -18,6 +19,7 @@ public class JPMainPanel extends JPanel{
 	private static final long serialVersionUID = 1L;
 	private JPHeader jPHeader;
 	private JPBody jPBody;
+	private JPEast jPEast;
 	
 	public static final Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
 		
@@ -29,6 +31,9 @@ public class JPMainPanel extends JPanel{
 	private void initComponents(ActionListener actionListener) {
 		this.jPHeader = new JPHeader(actionListener);
 		this.add(jPHeader,BorderLayout.NORTH);
+		
+		this.jPEast = new JPEast(actionListener);
+		this.add(jPEast,BorderLayout.EAST);
 		
 		this.jPBody = new JPBody(actionListener);
 		this.add(jPBody, BorderLayout.CENTER);

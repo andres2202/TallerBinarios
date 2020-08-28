@@ -54,13 +54,6 @@ public class JFMainWindow extends JFrame{
 		jShowPercentageBar.setVisible(true);
 	}
 	
-	public void showBarAverage(Object[] objects,String[] headers,String title) {
-		jShowPercentageBar = new JShowPercentageBar(500,300);
-		jShowPercentageBar.setLocationRelativeTo(this);
-		jShowPercentageBar.resetAverage(objects, headers, title);
-		jShowPercentageBar.setVisible(true);
-	}
-	
 	public String getnameFile() {
 		return jDFileChooser.getNameFile();
 	}
