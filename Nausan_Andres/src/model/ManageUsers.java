@@ -47,7 +47,11 @@ public class ManageUsers {
 		}
 		return list;
 	}
-	
+	/**
+	 * 
+	 * @param typeOfUse
+	 * @return
+	 */
 	public double getAverageTypeUse(TypeOfUse typeOfUse) {
 		int count = 0;
 		int sizeList = listUsers.size();
