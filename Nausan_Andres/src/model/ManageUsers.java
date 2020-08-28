@@ -60,11 +60,11 @@ public class ManageUsers {
 				count++;
 			}
 		}
-		return (count/listUsers.size())*100;
+		return (count/sizeList)*100;
 	}
 	
 	public Object[] listPercentageTypeUse() {
-		return new Object[] {
+		return new Object[] {	
 				getAverageTypeUse(TypeOfUse.DOMESTIC),
 				getAverageTypeUse(TypeOfUse.COMMERCIAL)
 		};
@@ -91,5 +91,13 @@ public class ManageUsers {
 				getAverageTotal(Constants.STRATUM_FOUR),
 				getAverageTotal(Constants.STRATUM_FIVE)
 		};
+	}
+	
+	public static void main(String[] args) {
+		ManageUsers mu = new ManageUsers();
+		mu.addUser(new User("", 22, new Tenement((byte)1, (byte)4, TypeOfUse.COMMERCIAL, 300, 500)));
+		mu.addUser(new User("", 22, new Tenement((byte)1, (byte)4, TypeOfUse.DOMESTIC, 300, 500)));
+		System.out.println(mu.getAverageTypeUse(TypeOfUse.COMMERCIAL));
+		System.out.println(mu.getAverageTypeUse(TypeOfUse.DOMESTIC));
 	}
 }
