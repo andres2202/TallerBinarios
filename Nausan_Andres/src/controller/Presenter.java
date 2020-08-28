@@ -39,11 +39,10 @@ public class Presenter implements ActionListener{
 	}
 	
 	private void showBarAverage() {
-		jFMainWindow.showBarPercentage(manageUsers.listPercentageAverage(),ConstantView.TYPE_STRATUM,"Promedio de Estratos.");
+		jFMainWindow.showBarAverage(new Object[] {150.7,199.9,30.5,70.7,89.5},ConstantView.TYPE_STRATUM,"Promedio de Estratos.");
 	}
 
 	private void showBarPercentage() {
-		System.out.println(manageUsers.getAverageTypeUse(TypeOfUse.COMMERCIAL));
 		jFMainWindow.showBarPercentage(manageUsers.listPercentageTypeUse(),ConstantView.USER_ENERGY,"Porcentaje por el punto de energia.");
 	}
 

@@ -47,4 +47,48 @@ public class ManageUsers {
 		}
 		return list;
 	}
+	/**
+	 * 
+	 * @param typeOfUse
+	 * @return
+	 */
+	public double getAverageTypeUse(TypeOfUse typeOfUse) {
+		int count = 0;
+		for (User user : listUsers) {
+			if (user.getTenement().getTypeOfUse().equals(typeOfUse)) {
+				count++;
+			}
+		}
+		return ((double)count*100/listUsers.size());
+	}
+	
+	public Object[] listPercentageTypeUse() {
+		return new Object[] {
+				getAverageTypeUse(TypeOfUse.DOMESTIC),
+				getAverageTypeUse(TypeOfUse.COMMERCIAL)
+		};
+	}
+	
+	public double getAverageTotal(int stratum) {
+		double count = 0;
+		int countUsers = 0;
+		int sizeList = listUsers.size();
+		for (int i = 0; i < sizeList; i++) {
+			if(listUsers.get(i).getTenement().getStratum()==stratum){
+					count += listUsers.get(i).calculateTotal();
+					countUsers++;
+			}
+		}
+		return (count/countUsers);
+	}
+	
+	public Object[] listPercentageAverage() {
+		return new Object[] {
+				getAverageTotal(Constants.STRATUM_ONE),
+				getAverageTotal(Constants.STRATUM_TWO),
+				getAverageTotal(Constants.STRATUM_THREE),
+				getAverageTotal(Constants.STRATUM_FOUR),
+				getAverageTotal(Constants.STRATUM_FIVE)
+		};
+	}
 }

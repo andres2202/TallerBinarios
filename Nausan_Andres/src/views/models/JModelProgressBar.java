@@ -26,6 +26,14 @@ public class JModelProgressBar extends JProgressBar{
 		this.setSize(new Dimension(width, height));
 		this.setBackground(bg);
 	}
+	public JModelProgressBar(int value,int width,int height,Color bg,int min,int max) {
+		this.setStringPainted(true);
+		this.setValue(value);
+		this.setMinimum(min);
+		this.setMaximum(max);
+		this.setSize(new Dimension(width, height));
+		this.setBackground(bg);
+	}
 	
 	public void editProgressBar(JModelProgressBar bar) {
 		this.setUI(new BasicProgressBarUI() {
