@@ -27,20 +27,24 @@ public class Presenter implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		switch (Commands.valueOf(e.getActionCommand())) {
-		case C_SEARCH_FILE:
-			this.setVisibility(true);
-			break;
-		case CancelSelection:
-			this.setVisibility(false);
-			break;
-		case ApproveSelection:
-			readFile();
-			break;
+		case C_SEARCH_FILE: this.setVisibility(true); break;
+		case CancelSelection: this.setVisibility(false); break;
+		case ApproveSelection: readFile(); break;
+		case C_SHOW_PERCENTAGE: this.showBarPercentage(); break;
+		case C_SHOW_AVERAGE: this.showBarAverage(); break;
 		default:
 			break;
 		}
 	}
 	
+	private void showBarAverage() {
+		
+	}
+
+	private void showBarPercentage() {
+		jFMainWindow.showBarPercentage(new Object[] {70.6,30.6},ConstantView.USER_ENERGY,"Porcentaje por el punto de energia.");
+	}
+
 	private void readFile() {
 		String pathIn = ConstantView.FOLDER_PATH_IN + jFMainWindow.getnameFile();
 		fileManager = new FileManager(pathIn, ConstantView.FOLDER_PATH_OUT);

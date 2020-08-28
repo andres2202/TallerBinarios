@@ -6,6 +6,9 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
+import view.body.JShowPercentageBar;
+import views.models.JModelProgressBar;
+
 public class JFMainWindow extends JFrame{
 
 	/**
@@ -15,6 +18,7 @@ public class JFMainWindow extends JFrame{
 	
 	private JPMainPanel jPMainPanel;
 	private JDFileChooser jDFileChooser;
+	private JShowPercentageBar jShowPercentageBar;
 	
 	public JFMainWindow(ActionListener actionListener) {
 		initFrame();
@@ -41,6 +45,13 @@ public class JFMainWindow extends JFrame{
 	
 	public void setDialog(boolean value) {
 		jDFileChooser.setVisible(value);
+	}
+	
+	public void showBarPercentage(Object[] objects,String[] headers,String title) {
+		jShowPercentageBar = new JShowPercentageBar(500,300);
+		jShowPercentageBar.setLocationRelativeTo(this);
+		jShowPercentageBar.resetDatas(objects, headers, title);
+		jShowPercentageBar.setVisible(true);
 	}
 	
 	public String getnameFile() {

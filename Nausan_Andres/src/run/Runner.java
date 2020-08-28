@@ -1,8 +1,5 @@
 package run;
 
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-
 import controller.Presenter;
 
 public class Runner {

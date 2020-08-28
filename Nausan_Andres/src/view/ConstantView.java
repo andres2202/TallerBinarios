@@ -52,6 +52,8 @@ public class ConstantView {
 											H_PREVIOUS_READING,H_CURRENT_READING,H_CONSUMPTION,
 											H_GROSS_TURNOVER,H_SUBSIDY,H_TAX,H_SURCHARGE,H_NET_TURNOVER};
 	
+	public static final String[] USER_ENERGY = {"Uso domestico","Uso Comercial"};
+	
 	//colores
 	public static final Color YELLOW_LIGHT = Color.decode("#FAF438");
 	public static final Color COLOR_DARK_BLUE = Color.decode("#304A4B");

@@ -10,6 +10,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
+import controller.Commands;
 import view.ConstantView;
 import views.models.JModelMenu;
 import views.models.JModelMenuItem;
@@ -37,8 +38,14 @@ public class JPMenu extends JPanel{
 		
 		percentages = new JModelMenu(ConstantView.TXT_PERCENTAGE,ConstantView.YELLOW_LIGHT, ConstantView.BLACK,ConstantView.FONT_ARIAL_ROUNDER_15);
 		percentageUsers = new JModelMenuItem(ConstantView.TXT_PERCENTAGE_USE, ConstantView.IMG_STADISTICS1,ConstantView.FONT_NEW_ROMAN_13, 25, 25);
-		average = new JModelMenu(ConstantView.TXT_PERCENTAGE,ConstantView.YELLOW_LIGHT, ConstantView.BLACK,ConstantView.FONT_ARIAL_ROUNDER_15);
+		percentageUsers.setActionCommand(Commands.C_SHOW_PERCENTAGE.toString());
+		percentageUsers.addActionListener(actionListener);
+		
+		average = new JModelMenu(ConstantView.TXT_AVERAGE,ConstantView.YELLOW_LIGHT, ConstantView.BLACK,ConstantView.FONT_ARIAL_ROUNDER_15);
 		averageUsers = new JModelMenuItem(ConstantView.TXT_AVERAGE_USERS, ConstantView.IMG_STADISTICS2,ConstantView.FONT_NEW_ROMAN_13, 25, 25);
+		averageUsers.setActionCommand(Commands.C_SHOW_AVERAGE.toString());
+		averageUsers.addActionListener(actionListener);
+		
 		percentages.add(percentageUsers);
 		average.add(averageUsers);
 		menuBar.add(percentages);
