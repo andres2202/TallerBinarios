@@ -24,7 +24,7 @@ public class User {
 		return tenement.getCurrentReading()-tenement.getPreviousReading();
 	}
 	/**
-	 * valor bruto de facturación
+	 * valor bruto de facturaciï¿½n
 	 * @return valor bruto
 	 */
 	public double calculateGrossValue() {
@@ -33,6 +33,7 @@ public class User {
 		}else {
 			return (Constants.HIGH_TURNOVER_VALUE*calculateConsumption());
 		}
+
 	}
 	/**
 	 * si excede consumo
@@ -43,6 +44,7 @@ public class User {
 	public boolean isExceed(int totalConsumption, int maxValue) {
 		if(totalConsumption <= maxValue) {
 			return false;
+			
 		}
 		return true;
 	}
@@ -88,7 +90,7 @@ public class User {
 		return 0;		
 	}
 	/**
-	 * Valor neto de la facturación
+	 * Valor neto de la facturaciï¿½n
 	 * @return
 	 */
 	public double calculateTotal() {
